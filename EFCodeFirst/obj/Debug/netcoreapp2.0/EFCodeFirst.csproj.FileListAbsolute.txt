@@ -1,0 +1,9 @@
+C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\bin\Debug\netcoreapp2.0\EFCodeFirst.deps.json
+C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\bin\Debug\netcoreapp2.0\EFCodeFirst.dll
+C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\bin\Debug\netcoreapp2.0\EFCodeFirst.pdb
+C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.AssemblyInfoInputs.cache
+C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.AssemblyInfo.cs
+C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.dll
+C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.pdb
+C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.csproj.CoreCompileInputs.cache
+C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.csprojAssemblyReference.cache

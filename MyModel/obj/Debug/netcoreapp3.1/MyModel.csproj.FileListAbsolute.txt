@@ -1,0 +1,9 @@
+C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\bin\Debug\netcoreapp3.1\MyModel.deps.json
+C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\bin\Debug\netcoreapp3.1\MyModel.dll
+C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\bin\Debug\netcoreapp3.1\MyModel.pdb
+C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\obj\Debug\netcoreapp3.1\MyModel.AssemblyInfoInputs.cache
+C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\obj\Debug\netcoreapp3.1\MyModel.AssemblyInfo.cs
+C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\obj\Debug\netcoreapp3.1\MyModel.dll
+C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\obj\Debug\netcoreapp3.1\MyModel.pdb
+C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\obj\Debug\netcoreapp3.1\MyModel.csprojAssemblyReference.cache
+C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\obj\Debug\netcoreapp3.1\MyModel.csproj.CoreCompileInputs.cache

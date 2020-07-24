@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jD0NOF2Tc0T2nxx062/FNIXt7jBySH22yHSDwSJONOO2q5ou3HArtXUk4gAQPP9UL00zuvz46fmiL0bEPW7iFw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\MyModel\\MyModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ginomasterflash\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
