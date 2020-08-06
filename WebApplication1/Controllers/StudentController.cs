@@ -76,5 +76,19 @@ namespace Application.API.Controllers
         public void Delete(int id)
         {
         }
+        [HttpGet("List")]
+        public async Task<IActionResult> GeneratePDF()
+        {
+           
+            _studentService.GeneratePdf();
+            return Ok();
+        }
+        [HttpGet("Html2Pdf")]
+        public async Task<IActionResult> Html2Pdf()
+        {
+
+            _studentService.Html2Pdf();
+            return Ok();
+        }
     }
 }

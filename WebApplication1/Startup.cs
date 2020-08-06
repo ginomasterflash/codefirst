@@ -10,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 using Business.Layer.Student;
 using Microsoft.OpenApi.Models;
 using System;
+using DinkToPdf.Contracts;
+using DinkToPdf;
 
 namespace WebApplication1
 {
@@ -30,6 +32,14 @@ namespace WebApplication1
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvcCore()
                 .AddApiExplorer();
+
+            // Enable Node Services
+            services.AddNodeServices();
+
+            // Add converter to DI
+            services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+
+            services.AddControllersWithViews();
 
             // Add application services.            
             services.AddHttpContextAccessor();

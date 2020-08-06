@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YiQKvg7M9WFUx4Wn5xkUiABzsKZpceVtCsCCCRBS1s15pWCjYDM9fyOXV2sV5LOvn1rTrjHi1jvEVKAI9W+4Tw==",
+  "dgSpecHash": "/r0scnsowK8Am0Q7nncmKU70GdthhAx+5S+L6UOH8g2R5u79VLSflA7GysCMJjOoNnAsTvV6y1i8zlUyNW8qgw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\EFCodeFirst\\EFCodeFirst.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\ginomasterflash\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\ginomasterflash\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\ginomasterflash\\.nuget\\packages\\phantomjs\\2.1.1\\phantomjs.2.1.1.nupkg.sha512",
     "C:\\Users\\ginomasterflash\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\ginomasterflash\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\ginomasterflash\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",

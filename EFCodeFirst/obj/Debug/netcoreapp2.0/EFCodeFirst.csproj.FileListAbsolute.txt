@@ -5,5 +5,5 @@ C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFC
 C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.AssemblyInfo.cs
 C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.dll
 C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.pdb
-C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.csproj.CoreCompileInputs.cache
 C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.csprojAssemblyReference.cache
+C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.csproj.CoreCompileInputs.cache
