@@ -32,9 +32,19 @@
 
   <ItemGroup>
     <Folder Include="db\" />
+    <Folder Include="images\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="images\logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\StyleSheet.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\Template1.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Templates\Template.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

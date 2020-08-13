@@ -87,8 +87,7 @@ namespace Application.API.Controllers
         public async Task<IActionResult> Html2Pdf()
         {
 
-            _studentService.Html2Pdf();
-            return Ok();
+            return Ok(_studentService.Html2Pdf());
         }
     }
 }

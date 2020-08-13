@@ -11,6 +11,19 @@ using System.Threading.Tasks;
 // Include the PDF Generator.
 using PhantomJs.NetCore;
 using DinkToPdf;
+using HandlebarsDotNet;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.text.html.simpleparser;
+using iTextSharp.tool.xml;
+using Swashbuckle.Swagger;
+using iTextSharp.tool.xml.pipeline.html;
+using iTextSharp.tool.xml.html;
+using iTextSharp.tool.xml.pipeline.css;
+using iTextSharp.tool.xml.pipeline.end;
+using iTextSharp.tool.xml.parser;
+using iTextSharp.tool.xml.css;
+using iTextSharp.tool.xml.net;
 
 namespace Business.Layer.Student
 {
@@ -125,32 +138,240 @@ namespace Business.Layer.Student
 
             Console.WriteLine("Pdf generated at: " + pathOftheGeneratedPdf);
         }
-        public void Html2Pdf()
+        public string Html2Pdf()
         {
             var converter = new BasicConverter(new PdfTools());
+            string templateFilePath = Path.Combine(AppContext.BaseDirectory, "templates", "Template1.html");
+            string templateFileCssPath1 = Path.Combine(AppContext.BaseDirectory, "templates", "StyleSheet.css");
+            string html = File.ReadAllText(templateFilePath);
+            string css = File.ReadAllText(templateFileCssPath1);
+            //Create a byte array that will eventually hold our final PDF
+            Byte[] bytes;
+
+            //Boilerplate iTextSharp setup here
+            //Create a stream that we can write to, in this case a MemoryStream
+            using (var ms = new MemoryStream())
+            {
+
+                //Create an iTextSharp Document which is an abstraction of a PDF but **NOT** a PDF
+                using (var doc = new Document())
+                {
+
+                    //Create a writer that's bound to our PDF abstraction and our stream
+                    using (var writer = PdfWriter.GetInstance(doc, ms))
+                    {
+
+                        //Open the document for writing
+                        doc.Open();
+
+                        //Our sample HTML and CSS
+                        var example_html = @"<p>This <em>is </em><span class=""headline"" style=""text-decoration: underline;"">some</span> <strong>sample <em> text</em></strong><span style=""color: red;"">!!!</span></p>";
+                        example_html = html;
+                        var example_css = @".headline{font-size:200%}";
+                        example_css = css;
+                        /**************************************************
+                         * Example #1                                     *
+                         *                                                *
+                         * Use the built-in HTMLWorker to parse the HTML. *
+                         * Only inline CSS is supported.                  *
+                         * ************************************************/
+                        if (false) {
+                            //Create a new HTMLWorker bound to our document
+                            using (var htmlWorker = new iTextSharp.text.html.simpleparser.HTMLWorker(doc))
+                            {
+
+                                //HTMLWorker doesn't read a string directly but instead needs a TextReader (which StringReader subclasses)
+                                using (var sr = new StringReader(example_html))
+                                {
+
+                                    //Parse the HTML
+                                    htmlWorker.Parse(sr);
+                                }
+                            }
+
+                            /**************************************************
+                             * Example #2                                     *
+                             *                                                *
+                             * Use the XMLWorker to parse the HTML.           *
+                             * Only inline CSS and absolutely linked          *
+                             * CSS is supported                               *
+                             * ************************************************/
+
+                            //XMLWorker also reads from a TextReader and not directly from a string
+                            using (var srHtml = new StringReader(example_html))
+                            {
+
+                                //Parse the HTML
+                                iTextSharp.tool.xml.XMLWorkerHelper.GetInstance().ParseXHtml(writer, doc, srHtml);
+                            }
+                        }
+                        /**************************************************
+                         * Example #3                                     *
+                         *                                                *
+                         * Use the XMLWorker to parse HTML and CSS        *
+                         * ************************************************/
+
+                        //In order to read CSS as a string we need to switch to a different constructor
+                        //that takes Streams instead of TextReaders.
+                        //Below we convert the strings into UTF8 byte array and wrap those in MemoryStreams
+                        using (var msCss = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(example_css)))
+                        {
+                           // example_html = html;
+                            using (var msHtml = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(example_html)))
+                            {
+
+                                //Parse the HTML
+                                iTextSharp.tool.xml.XMLWorkerHelper.GetInstance().ParseXHtml(writer, doc, msHtml, msCss);
+                            }
+                        }
+
+
+                        doc.Close();
+                    }
+                }
+
+                //After all of the PDF "stuff" above is done and closed but **before** we
+                //close the MemoryStream, grab all of the active bytes from the stream
+                bytes = ms.ToArray();
+            }
+
+            //Now we just need to do something with those bytes.
+            //Here I'm writing them to disk but if you were in ASP.Net you might Response.BinaryWrite() them.
+            //You could also write the bytes to a database in a varbinary() column (but please don't) or you
+            //could pass them to another function for further PDF processing.
+            var testFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "test.pdf");
+            System.IO.File.WriteAllBytes(testFile, bytes);
+            return string.Empty;
+        }
+
+
+    
+    public void ConvertHtmlToPdf()
+        {
             string templateFilePath = Path.Combine(AppContext.BaseDirectory, "templates", "Template.html");
             string html = File.ReadAllText(templateFilePath);
-            html = html.Replace("{holder}", "Mannaggia l'inter");
-            var doc = new HtmlToPdfDocument()
-            {
-                GlobalSettings = {
-                    ColorMode = ColorMode.Color,
-                    Orientation = Orientation.Landscape,
-                    PaperSize = PaperKind.A4Plus,
-                    
-                },
-                Objects = {
-                    new ObjectSettings() {
-                        PagesCount = true,
 
-                        HtmlContent =html,
-                        WebSettings = { DefaultEncoding = "utf-8" },
-                        HeaderSettings = { FontSize = 9, Right = "Page [page] of [toPage]", Line = true, Spacing = 2.812 }
-                    }
-                },
+            //Document document = new Document();
+            //_ = PdfWriter.GetInstance(document, new FileStream(Path.Combine(AppContext.BaseDirectory, "templates", "MySamplePDF.pdf"), FileMode.Create));
+            //document.Open();
+            //iTextSharp.text.html.simpleparser.HTMLWorker hw =
+            //new iTextSharp.text.html.simpleparser.HTMLWorker(document);
+            //hw.Parse(new StringReader(html));
+            //document.Close();
+            Guid newID = Guid.NewGuid();
+            StringReader sr = new StringReader(html);
+            Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
+            FileStream f = new FileStream("test.txt", FileMode.OpenOrCreate,
+                    FileAccess.Write);
+            PdfWriter writer = PdfWriter.GetInstance(pdfDoc, f);
+            pdfDoc.Open();
+            XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+            pdfDoc.Close();
+
+        }
+        public void HtmlToPdf1()
+        {
+            // ConvertHtmlToPdf();
+            string templateFilePath = Path.Combine(AppContext.BaseDirectory, "templates", "Template.html");
+            string html = File.ReadAllText(templateFilePath);
+            string cssFilePath = Path.Combine(AppContext.BaseDirectory, "templates", "StyleSheet.css");
+            string css = File.ReadAllText(templateFilePath);
+            var template = Handlebars.Compile(html);
+
+            var data = new
+            {
+                title = "My new post",
+                logo = "https://www.google.it/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+                alt_logo = "Lorenzone Provolone",
+                propertyName = "a casa mia",
+                address = "via roma 74",
+                phone = "327-4569589",
+                beneficiary = "U mariu",
+                holder = "Gianni",
+                dedication = "dedicato a te",
+                voucherName = "2 pizze",
+                quantity = "3",
+                unitOfMeasure = "a persona",
+                childOrders = "niente",
+                issueDate = DateTime.Now.ToShortDateString(),
+                expirationDate = DateTime.Now.AddDays(2).ToShortDateString(),
+                voucherCode = "MSDS-448-DKFD",
+                rateName = "a persona",
+
             };
-            byte[] pdf = converter.Convert(doc);
-            File.WriteAllBytes(Path.Combine(AppContext.BaseDirectory, "templates", "test1.pdf"), pdf);
+
+            var result = template(data);
+            List<string> cssFiles = new List<string>();
+            byte[] pdf;
+            Document document = new Document(PageSize.A4);
+            using (var ms = new MemoryStream())
+            {
+                PdfWriter writer = PdfWriter.GetInstance(document, ms);
+                writer.CloseStream = false;
+                document.Open();
+                HtmlPipelineContext htmlContext = new HtmlPipelineContext(null);
+                htmlContext.SetTagFactory(Tags.GetHtmlTagProcessorFactory());
+
+                ICSSResolver cssResolver = XMLWorkerHelper.GetInstance().GetDefaultCssResolver(false);
+                cssResolver.AddCssFile(cssFilePath, true);
+
+                IPipeline pipeline = new CssResolverPipeline(cssResolver, new HtmlPipeline(htmlContext, new PdfWriterPipeline(document, writer)));
+
+                XMLWorker worker = new XMLWorker(pipeline, true);
+                XMLParser xmlParser = new XMLParser(worker);
+                xmlParser.Parse(new MemoryStream(Encoding.UTF8.GetBytes(result)));
+
+                document.Close();
+                pdf = ms.GetBuffer();
+
+
+            }
+            File.WriteAllBytes(Path.Combine(AppContext.BaseDirectory, "templates", "test2.pdf"), pdf);
+
+
+
+        }
+        public void HtmlToPdf2()
+        {
+            //    string CSSFile = "th { background-color: #C0C0C0; font-size: 16pt; } "
+            //+ "td { font-size: 10pt; }";
+            //string HTML = "<html><body><table  class='table-bordered'>"
+            //    + "<thead><tr><th>Customer Name</th><th>Customer's Address</th> </tr></thead>"
+            //    + "<tbody><tr><td> XYZ </td><td> Bhubaneswar </td></tr>"
+            //    + "<tr><td> MNP </td><td> Cuttack </td></tr></tbody>"
+            //    + "</table></body></html>";
+
+
+            iTextSharp.text.Image addLogo = default(iTextSharp.text.Image);
+            //addLogo = iTextSharp.text.Image.GetInstance(new Uri(Path.Combine( "images", "logo.jpg")));
+            Document document = new Document();
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(Path.Combine(AppContext.BaseDirectory, "templates", "MySamplePDF.pdf"), FileMode.Create));
+            document.Open();
+            //document.Add(addLogo);
+
+            ICSSResolver cssResolver = new StyleAttrCSSResolver();
+            string templateFilePath = Path.Combine(AppContext.BaseDirectory, "templates", "Template.html");
+            string HTML = File.ReadAllText(templateFilePath);
+            string cssFilePath = Path.Combine(AppContext.BaseDirectory, "templates", "StyleSheet.css");
+            string CSSFile = File.ReadAllText(templateFilePath);
+            var cssFile = XMLWorkerHelper.GetCSS(new MemoryStream(Encoding.ASCII.GetBytes(CSSFile)));
+            cssResolver.AddCss(cssFile);
+
+            // HTML
+            HtmlPipelineContext htmlContext = new HtmlPipelineContext(null);
+            //htmlContext.SetTagFactory(Tags.GetHtmlTagProcessorFactory());
+
+
+            // Pipelines
+            PdfWriterPipeline pdf = new PdfWriterPipeline(document, writer);
+            HtmlPipeline html = new HtmlPipeline(htmlContext, pdf);
+            CssResolverPipeline css = new CssResolverPipeline(cssResolver, html);
+
+            // XML Worker
+            XMLWorker worker = new XMLWorker(css, true);
+            XMLParser p = new XMLParser(worker);
+            p.Parse(new MemoryStream(Encoding.ASCII.GetBytes(HTML)));
+            document.Close();
         }
     }
 }

@@ -11,4 +11,5 @@ C:\Users\ginomasterflash\Desktop\Lorenzo\Business.Layer\bin\Debug\netcoreapp3.1\
 C:\Users\ginomasterflash\Desktop\Lorenzo\Business.Layer\obj\Debug\netcoreapp3.1\Business.Layer.csproj.CopyComplete
 C:\Users\ginomasterflash\Desktop\Lorenzo\Business.Layer\obj\Debug\netcoreapp3.1\Business.Layer.dll
 C:\Users\ginomasterflash\Desktop\Lorenzo\Business.Layer\obj\Debug\netcoreapp3.1\Business.Layer.pdb
+C:\Users\ginomasterflash\Desktop\Lorenzo\Business.Layer\bin\Debug\netcoreapp3.1\Select.Html.dep
 C:\Users\ginomasterflash\Desktop\Lorenzo\Business.Layer\obj\Debug\netcoreapp3.1\Business.Layer.csproj.CoreCompileInputs.cache

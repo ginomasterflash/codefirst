@@ -8,6 +8,9 @@ namespace Business.Layer.Student
         int CreateStudent(StudentModel student);
         Task<StudentModel> GetStudentAsync(int studentId);
         void GeneratePdf();
-        void Html2Pdf();
+        string Html2Pdf();
+        void HtmlToPdf1();
+        void HtmlToPdf2();
+        void ConvertHtmlToPdf();
     }
 }

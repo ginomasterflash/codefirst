@@ -10,9 +10,14 @@
         "dependencies": {
           "DinkToPdf": "1.0.8",
           "EFCodeFirst": "1.0.0",
+          "Handlebars.Net": "1.10.1",
           "Microsoft.AspNetCore.NodeServices": "3.1.6",
           "MyModel": "1.0.0",
-          "PhantomJS": "2.1.1"
+          "PhantomJS": "2.1.1",
+          "Select.HtmlToPdf": "20.1.0",
+          "Swashbuckle.Core": "5.6.0",
+          "iTextSharp": "5.5.13.1",
+          "itextsharp.xmlworker": "5.5.13.1"
         },
         "runtime": {
           "Business.Layer.dll": {}
@@ -23,7 +28,7 @@
           "NETStandard.Library": "1.6.0",
           "System.Collections.Concurrent": "4.3.0",
           "System.Globalization": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
           "System.Threading.Thread": "4.0.0"
@@ -32,6 +37,60 @@
           "lib/netstandard1.6/DinkToPdf.dll": {
             "assemblyVersion": "1.0.8.0",
             "fileVersion": "1.0.8.0"
+          }
+        }
+      },
+      "Handlebars.Net/1.10.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.0",
+          "System.Reflection.TypeExtensions": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Handlebars.dll": {
+            "assemblyVersion": "1.10.1.0",
+            "fileVersion": "1.10.1.0"
+          }
+        }
+      },
+      "iTextSharp/5.5.13.1": {
+        "runtime": {
+          "lib/itextsharp.dll": {
+            "assemblyVersion": "5.5.13.1",
+            "fileVersion": "5.5.13.1"
+          }
+        }
+      },
+      "itextsharp.xmlworker/5.5.13.1": {
+        "dependencies": {
+          "iTextSharp": "5.5.13.1"
+        },
+        "runtime": {
+          "lib/itextsharp.xmlworker.dll": {
+            "assemblyVersion": "5.5.13.1",
+            "fileVersion": "5.5.13.1"
+          }
+        }
+      },
+      "Microsoft.AspNet.WebApi.Client/4.0.20710": {
+        "dependencies": {
+          "Microsoft.Net.Http": "2.0.20710",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/net40/System.Net.Http.Formatting.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.20710.0"
+          }
+        }
+      },
+      "Microsoft.AspNet.WebApi.Core/4.0.20710": {
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "4.0.20710"
+        },
+        "runtime": {
+          "lib/net40/System.Web.Http.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.20710.0"
           }
         }
       },
@@ -63,6 +122,7 @@
           }
         }
       },
+      "Microsoft.CSharp/4.4.0": {},
       "Microsoft.EntityFrameworkCore/3.1.6": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
@@ -261,6 +321,7 @@
           }
         }
       },
+      "Microsoft.Net.Http/2.0.20710": {},
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.Win32.Primitives/4.0.1": {
@@ -349,6 +410,19 @@
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "Select.HtmlToPdf/20.1.0": {},
+      "Swashbuckle.Core/5.6.0": {
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Core": "4.0.20710",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/net40/Swashbuckle.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "System.AppContext/4.1.0": {
@@ -538,7 +612,7 @@
           "System.Reflection.Emit.Lightweight": "4.0.1",
           "System.Reflection.Extensions": "4.0.1",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -650,12 +724,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Reflection.TypeExtensions/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
-          "System.Runtime": "4.3.0"
-        }
-      },
+      "System.Reflection.TypeExtensions/4.4.0": {},
       "System.Resources.ResourceManager/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -962,6 +1031,41 @@
       "path": "dinktopdf/1.0.8",
       "hashPath": "dinktopdf.1.0.8.nupkg.sha512"
     },
+    "Handlebars.Net/1.10.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F/1eETC5AUfxaK+zG6EhUZa89TfxRtTMvTg9T6AsWzPkli/szv+OWEKpgQgXcONtM+nLkn7Q5Lfau0BA8eTxlQ==",
+      "path": "handlebars.net/1.10.1",
+      "hashPath": "handlebars.net.1.10.1.nupkg.sha512"
+    },
+    "iTextSharp/5.5.13.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xqzsYEYW/nMDjCtAXM5cl9fWil/Ju3HEGbsmoTKtltJc3M/9HNJzg++bCIOHm5uZITvRmZJWMO+S2u1yNG0gQg==",
+      "path": "itextsharp/5.5.13.1",
+      "hashPath": "itextsharp.5.5.13.1.nupkg.sha512"
+    },
+    "itextsharp.xmlworker/5.5.13.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uGxlL39YGVgFuBOdw1WmGs5j4JxDeSG2QNLqBS1CG+q/57suw6fUFQGbwccIpUbQz1Y3FAO6NjkWgaS6QAswzw==",
+      "path": "itextsharp.xmlworker/5.5.13.1",
+      "hashPath": "itextsharp.xmlworker.5.5.13.1.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebApi.Client/4.0.20710": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BwFtW0cGr8tg02XalvF8MmznOpYrhquD2eXWI0oF3LLSqLMFoFkb8Pmke/7SnqkiNc+YfsaUqdXEKbjhv1Ctrw==",
+      "path": "microsoft.aspnet.webapi.client/4.0.20710",
+      "hashPath": "microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebApi.Core/4.0.20710": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ufD+tH4W7+eNsb4pzX5oFTDcgI6J3lffughFTkyLHPBZ+A4Eo+VncAxt3lbt9zxxbLHXIbgJHYRLvtgR5YEZAQ==",
+      "path": "microsoft.aspnet.webapi.core/4.0.20710",
+      "hashPath": "microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.NodeServices/3.1.6": {
       "type": "package",
       "serviceable": true,
@@ -982,6 +1086,13 @@
       "sha512": "sha512-J2G1k+u5unBV+aYcwxo94ip16Rkp65pgWFb0R6zwJipzWNMgvqlWeuI7/+R+e8bob66LnSG+llLJ+z8wI94cHg==",
       "path": "microsoft.bcl.hashcode/1.1.0",
       "hashPath": "microsoft.bcl.hashcode.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vvVR/B08YVghQ4jHEloxqw2ZWzEGE1AOA5E0DioUM3ujbXz6FD3AfB/0Jl2ohJPd0nXYGwmPe1En6HTsSriq1A==",
+      "path": "microsoft.csharp/4.4.0",
+      "hashPath": "microsoft.csharp.4.4.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/3.1.6": {
       "type": "package",
@@ -1109,6 +1220,13 @@
       "path": "microsoft.extensions.primitives/3.1.6",
       "hashPath": "microsoft.extensions.primitives.3.1.6.nupkg.sha512"
     },
+    "Microsoft.Net.Http/2.0.20710": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OsB/5QO9tYJRLYIgBOhRl4Tssh3pw7+UAO9tMGMBg63f98GfjsniVIwLWRC0vcRr/F6HLP/NvRlHyGBhtD7Bmw==",
+      "path": "microsoft.net.http/2.0.20710",
+      "hashPath": "microsoft.net.http.2.0.20710.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -1178,6 +1296,20 @@
       "sha512": "sha512-2CQK0jmO6Eu7ZeMgD+LOFbNJSXHFVQbCJJkEyEwowh1SCgYnrn9W9RykMfpeeVGw7h4IBvYikzpGUlmZTUafJw==",
       "path": "runtime.native.system.security.cryptography/4.0.0",
       "hashPath": "runtime.native.system.security.cryptography.4.0.0.nupkg.sha512"
+    },
+    "Select.HtmlToPdf/20.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y9NBzum1VI22+V8jyGqbOLRvujsMSYdcSA92BjksIrj34wEqwpFDp2ssFPFGKmaWR/sqCnjuduJaeEdbUQNZmQ==",
+      "path": "select.htmltopdf/20.1.0",
+      "hashPath": "select.htmltopdf.20.1.0.nupkg.sha512"
+    },
+    "Swashbuckle.Core/5.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GhVWgtB8hCOxQhx7zLiiRyoi6flm7fNDDGILYHWktxLMkykRUz90fhmLRZECmnbvCcepFyROiw3phS1XorhdDg==",
+      "path": "swashbuckle.core/5.6.0",
+      "hashPath": "swashbuckle.core.5.6.0.nupkg.sha512"
     },
     "System.AppContext/4.1.0": {
       "type": "package",
@@ -1396,12 +1528,12 @@
       "path": "system.reflection.primitives/4.3.0",
       "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
     },
-    "System.Reflection.TypeExtensions/4.3.0": {
+    "System.Reflection.TypeExtensions/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7u6ulLcZbyxB5Gq0nMkQttcdBTx57ibzw+4IOXEfR+sXYQoHvjW5LTLyNr8O22UIMrqYbchJQJnos4eooYzYJA==",
-      "path": "system.reflection.typeextensions/4.3.0",
-      "hashPath": "system.reflection.typeextensions.4.3.0.nupkg.sha512"
+      "sha512": "sha512-dkmh/ySlwnXJp/1qYP9uyKkCK1CXR/REFzl7abHcArxBcV91mY2CgrrzSRA5Z/X4MevJWwXsklGRdR3A7K9zbg==",
+      "path": "system.reflection.typeextensions/4.4.0",
+      "hashPath": "system.reflection.typeextensions.4.4.0.nupkg.sha512"
     },
     "System.Resources.ResourceManager/4.3.0": {
       "type": "package",
