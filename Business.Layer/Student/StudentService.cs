@@ -241,6 +241,7 @@ namespace Business.Layer.Student
             //could pass them to another function for further PDF processing.
             var testFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "test.pdf");
             System.IO.File.WriteAllBytes(testFile, bytes);
+            File.WriteAllBytes(Path.Combine(AppContext.BaseDirectory, "templates", "test2.pdf"), bytes);
             return string.Empty;
         }
 
