@@ -12,6 +12,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using DinkToPdf.Contracts;
 using DinkToPdf;
+using Application.API.Middleware;
 
 namespace WebApplication1
 {
@@ -76,6 +77,8 @@ namespace WebApplication1
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseExceptionMiddleware();
 
             app.UseHttpsRedirection();
 

@@ -7,3 +7,12 @@ C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFC
 C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.pdb
 C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.csprojAssemblyReference.cache
 C:\Users\ginomasterflash\Desktop\Lorenzo\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.csproj.CoreCompileInputs.cache
+C:\mattiar_project\codefirst\EFCodeFirst\bin\Debug\netcoreapp2.0\EFCodeFirst.deps.json
+C:\mattiar_project\codefirst\EFCodeFirst\bin\Debug\netcoreapp2.0\EFCodeFirst.dll
+C:\mattiar_project\codefirst\EFCodeFirst\bin\Debug\netcoreapp2.0\EFCodeFirst.pdb
+C:\mattiar_project\codefirst\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.csprojAssemblyReference.cache
+C:\mattiar_project\codefirst\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.AssemblyInfoInputs.cache
+C:\mattiar_project\codefirst\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.AssemblyInfo.cs
+C:\mattiar_project\codefirst\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.csproj.CoreCompileInputs.cache
+C:\mattiar_project\codefirst\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.dll
+C:\mattiar_project\codefirst\EFCodeFirst\obj\Debug\netcoreapp2.0\EFCodeFirst.pdb

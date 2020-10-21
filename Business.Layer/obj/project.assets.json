@@ -5360,23 +5360,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ginomasterflash\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\matti\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\Business.Layer\\Business.Layer.csproj",
+      "projectUniqueName": "C:\\mattiar_project\\codefirst\\Business.Layer\\Business.Layer.csproj",
       "projectName": "Business.Layer",
-      "projectPath": "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\Business.Layer\\Business.Layer.csproj",
-      "packagesPath": "C:\\Users\\ginomasterflash\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\Business.Layer\\obj\\",
+      "projectPath": "C:\\mattiar_project\\codefirst\\Business.Layer\\Business.Layer.csproj",
+      "packagesPath": "C:\\Users\\matti\\.nuget\\packages\\",
+      "outputPath": "C:\\mattiar_project\\codefirst\\Business.Layer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ginomasterflash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\matti\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5384,17 +5380,16 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://cdshotels.pkgs.visualstudio.com/_packaging/CDSHotels/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\EFCodeFirst\\EFCodeFirst.csproj": {
-              "projectPath": "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\EFCodeFirst\\EFCodeFirst.csproj"
+            "C:\\mattiar_project\\codefirst\\EFCodeFirst\\EFCodeFirst.csproj": {
+              "projectPath": "C:\\mattiar_project\\codefirst\\EFCodeFirst\\EFCodeFirst.csproj"
             },
-            "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\MyModel\\MyModel.csproj": {
-              "projectPath": "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\MyModel\\MyModel.csproj"
+            "C:\\mattiar_project\\codefirst\\MyModel\\MyModel.csproj": {
+              "projectPath": "C:\\mattiar_project\\codefirst\\MyModel\\MyModel.csproj"
             }
           }
         }
@@ -5459,7 +5454,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jD0NOF2Tc0T2nxx062/FNIXt7jBySH22yHSDwSJONOO2q5ou3HArtXUk4gAQPP9UL00zuvz46fmiL0bEPW7iFw==",
+  "dgSpecHash": "rFSKw6YVpLn66qwSinFJrwfwk23e3/ShHUSzr6w6c5SUupc5LBeVmQYTvrdjXQN3AWlcryx07CUG+zTmb15qUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\MyModel\\MyModel.csproj",
+  "projectFilePath": "C:\\mattiar_project\\codefirst\\MyModel\\MyModel.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ginomasterflash\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\matti\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

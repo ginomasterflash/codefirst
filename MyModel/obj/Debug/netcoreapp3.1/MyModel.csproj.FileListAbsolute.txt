@@ -7,3 +7,12 @@ C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\obj\Debug\netcoreapp3.1\MyModel
 C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\obj\Debug\netcoreapp3.1\MyModel.pdb
 C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\obj\Debug\netcoreapp3.1\MyModel.csprojAssemblyReference.cache
 C:\Users\ginomasterflash\Desktop\Lorenzo\MyModel\obj\Debug\netcoreapp3.1\MyModel.csproj.CoreCompileInputs.cache
+C:\mattiar_project\codefirst\MyModel\bin\Debug\netcoreapp3.1\MyModel.deps.json
+C:\mattiar_project\codefirst\MyModel\bin\Debug\netcoreapp3.1\MyModel.dll
+C:\mattiar_project\codefirst\MyModel\bin\Debug\netcoreapp3.1\MyModel.pdb
+C:\mattiar_project\codefirst\MyModel\obj\Debug\netcoreapp3.1\MyModel.csprojAssemblyReference.cache
+C:\mattiar_project\codefirst\MyModel\obj\Debug\netcoreapp3.1\MyModel.AssemblyInfoInputs.cache
+C:\mattiar_project\codefirst\MyModel\obj\Debug\netcoreapp3.1\MyModel.AssemblyInfo.cs
+C:\mattiar_project\codefirst\MyModel\obj\Debug\netcoreapp3.1\MyModel.csproj.CoreCompileInputs.cache
+C:\mattiar_project\codefirst\MyModel\obj\Debug\netcoreapp3.1\MyModel.dll
+C:\mattiar_project\codefirst\MyModel\obj\Debug\netcoreapp3.1\MyModel.pdb

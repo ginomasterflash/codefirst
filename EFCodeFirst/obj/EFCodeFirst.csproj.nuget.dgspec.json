@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\EFCodeFirst\\EFCodeFirst.csproj": {}
+    "C:\\mattiar_project\\codefirst\\EFCodeFirst\\EFCodeFirst.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\EFCodeFirst\\EFCodeFirst.csproj": {
+    "C:\\mattiar_project\\codefirst\\EFCodeFirst\\EFCodeFirst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\EFCodeFirst\\EFCodeFirst.csproj",
+        "projectUniqueName": "C:\\mattiar_project\\codefirst\\EFCodeFirst\\EFCodeFirst.csproj",
         "projectName": "EFCodeFirst",
-        "projectPath": "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\EFCodeFirst\\EFCodeFirst.csproj",
-        "packagesPath": "C:\\Users\\ginomasterflash\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ginomasterflash\\Desktop\\Lorenzo\\EFCodeFirst\\obj\\",
+        "projectPath": "C:\\mattiar_project\\codefirst\\EFCodeFirst\\EFCodeFirst.csproj",
+        "packagesPath": "C:\\Users\\matti\\.nuget\\packages\\",
+        "outputPath": "C:\\mattiar_project\\codefirst\\EFCodeFirst\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ginomasterflash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\matti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://cdshotels.pkgs.visualstudio.com/_packaging/CDSHotels/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.0": {
@@ -75,7 +71,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
